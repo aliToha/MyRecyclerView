@@ -19,7 +19,7 @@ public class DetailPariwisata extends AppCompatActivity {
     ImageView imgPariwisata;
     @BindView(R.id.name_pariwisata)
     TextView namePariwisata;
-    @BindView(R.id.president_remarks)
+    @BindView(R.id.description)
     TextView description;
 
     @Override
@@ -39,7 +39,7 @@ public class DetailPariwisata extends AppCompatActivity {
         description.setText(bundle.getString("DESCRIPTION"));
 
         Glide.with(this).load(bundle.get("PHOTO"))
-                .apply(new RequestOptions().override(400, 400))
+                .apply(new RequestOptions().override(600, 400))
                 .into(imgPariwisata);
     }
 }

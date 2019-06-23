@@ -39,7 +39,7 @@ public class AdapterCard extends RecyclerView.Adapter<AdapterCard.HolderList> {
     @NonNull
     @Override
     public HolderList onCreateViewHolder(@NonNull ViewGroup viewGroup, int position) {
-        View itemRow = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.row_cardview_presiden, viewGroup, false);
+        View itemRow = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.row_cardview_pariwisata, viewGroup, false);
         return new HolderList(itemRow);
     }
 
@@ -47,7 +47,7 @@ public class AdapterCard extends RecyclerView.Adapter<AdapterCard.HolderList> {
     public void onBindViewHolder(@NonNull HolderList holderList, int i) {
         holderList.name.setText(listPariwisata.get(i).getName());
         Glide.with(context).load(listPariwisata.get(i).getPhoto())
-                .apply(new RequestOptions().override(500, 500))
+                .apply(new RequestOptions().override(200, 200))
                 .into(holderList.photo);
 
     }

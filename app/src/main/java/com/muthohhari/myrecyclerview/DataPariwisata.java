@@ -5,6 +5,7 @@ import com.muthohhari.myrecyclerview.model.Pariwisata;
 import java.util.ArrayList;
 
 public class DataPariwisata {
+
     private static String[][] data = new String[][]{
             {"Kaliadem","https://cdn.idntimes.com/content-images/post/20180729/7b2dda850640d4d4e75a5628534bd5d5.jpg","Kalau pernah liat posting-an temanmu berfoto dengan latar Gunung Merapi yang gagah tepat di belakangnya, itu pasti di kawasan Kaliurang. Tepatnya di Bungker Kaliadem. Selain bisa belajar banyak tentang sejarah letusan Gunung Merapi, kamu juga bisa menemukan innerpeace, karena hawanya sejuk, sepi, dan bisa banget buat melepas penat. Kalau kamu sudah bisa foto seperti di atas ini, selamat level petualanganmu baru saja naik satu tingkat!"},
             {"Wisata Kalibiru","https://cdn.idntimes.com/content-images/post/20180729/beae785c026960cfbfd1ff09d34b00d1.jpg","Lokasinya ada di bagian barat Yogyakarta. Buat kamu yang gak alergi dengan ketinggian, tempat ini jadi destinasi yang seru banget. Kamu bisa berfoto di atas ketinggian dari sebuah panggung dan pohon, dengan latar belakang jurang. Tenang saja, kamu bakal dibekali dengan alat pengaman ketika naik panggung tinggi, kok. Jadi tetap nyaman dan aman saat berfoto ria."},
@@ -20,13 +21,13 @@ public class DataPariwisata {
     };
 
     public static ArrayList<Pariwisata> getListData() {
-        Pariwisata pariwisata = null;
+        Pariwisata pariwisata;
         ArrayList<Pariwisata> list = new ArrayList<>();
         for (String[] aData : data) {
             pariwisata = new Pariwisata();
             pariwisata.setName(aData[0]);
-            pariwisata.setPhoto(aData[2]);
-            pariwisata.setDescription(aData[3]);
+            pariwisata.setPhoto(aData[1]);
+            pariwisata.setDescription(aData[2]);
 
             list.add(pariwisata);
         }
